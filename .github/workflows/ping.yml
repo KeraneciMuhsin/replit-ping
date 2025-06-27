@@ -1,0 +1,14 @@
+name: Ping Replit Bot
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # Her 5 dakikada bir çalışır
+  workflow_dispatch:       # İstersen manuel de çalıştırabilirsin
+
+jobs:
+  curl_ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Replit URL
+        run: curl -I https://b41d77a3-4df2-46a8-a3ed-fe66c2fc373b-00-8277v792vsqb.pike.replit.dev/
